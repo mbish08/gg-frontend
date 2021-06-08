@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchPlantGroups } from './actions/fetchPlantGroups'
+import PlantGroupContainer from './containers/PlantGroupContainer'
 
 class App extends Component {
 
   // initial fetch testing
-  componentDidMount() {
-    this.props.fetchPlantGroups()
+  // componentDidMount() {
+  //   this.props.fetchPlantGroups()
 
   //     fetch('http://localhost:3000/api/v1/plant_types')
   //     .then(res => res.json())
   //     .then(types => console.log(types))
-  }
+  // }
 
   render() {
     return (
       <div>
-        App
+        <PlantGroupContainer />
       </div>
     );
   }
@@ -28,4 +29,4 @@ class App extends Component {
 //   }
 // }
 
-export default connect(null, {fetchPlantGroups})(App);
+export default connect()(App);
