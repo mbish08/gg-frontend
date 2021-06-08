@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 const PlantGroupList = (props) => {
 
@@ -11,10 +10,6 @@ const PlantGroupList = (props) => {
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        plantGroups: state.plantGroups
-    }
-}
 
-export default connect(mapStateToProps)(PlantGroupList);
+
+export default PlantGroupList;

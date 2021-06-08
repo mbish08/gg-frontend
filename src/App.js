@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { fetchPlantGroups } from './actions/fetchPlantGroups'
 import PlantGroupContainer from './containers/PlantGroupContainer'
 
 class App extends Component {
@@ -23,10 +21,4 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     plantGroups: state.plantGroups
-//   }
-// }
-
-export default connect()(App);
+export default App;
