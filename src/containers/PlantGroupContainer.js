@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 class PlantGroupContainer extends Component {
 
-     componentDidMount() {
+    componentDidMount() {
         this.props.fetchPlantGroups()
     }
 
