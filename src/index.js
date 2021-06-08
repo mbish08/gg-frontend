@@ -4,7 +4,7 @@ import App from './App';
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux' 
-import plantGroupReducer from './reducers/plantGroupreducer'
+import plantGroupReducer from './reducers/plantGroupReducer'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
