@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { fetchPlantGroups } from './actions/fetchPlantGroups'
 
 class App extends Component {
 
