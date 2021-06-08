@@ -5,7 +5,7 @@ const PlantGroupList = (props) => {
     // look at destructuring argument vs props
     return (
         <div>
-            PlantGroupList test
+            {props.plantGroups.map(plantGroup => <li>{plantGroup.name}</li> )}
         </div>
     );
 }
