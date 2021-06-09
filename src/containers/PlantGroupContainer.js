@@ -13,7 +13,7 @@ class PlantGroupContainer extends Component {
     render() {
         return (
             <div>
-                <PlantGroupForm />
+                <PlantGroupForm /><br/>
                 <PlantGroupList plantGroups={this.props.plantGroups} />
             </div>
         );
