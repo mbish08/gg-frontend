@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class PlantGroupForm extends Component {
 
@@ -29,4 +30,4 @@ class PlantGroupForm extends Component {
     }
 }
 
-export default PlantGroupForm;
+export default connect(null, {addPlantGroup})(PlantGroupForm);
