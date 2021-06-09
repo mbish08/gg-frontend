@@ -15,8 +15,12 @@ class PlantGroupForm extends Component {
     }
 
     handleSubmit = (event) => {
+
         event.preventDefault()
         this.props.addPlantGroup(this.state)
+        this.setState({
+            name: ''
+        })
     }
 
     render() {
