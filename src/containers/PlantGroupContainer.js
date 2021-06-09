@@ -16,10 +16,8 @@ class PlantGroupContainer extends Component {
         return (
             <div>
                 <Route path='/plant_groups/new' component={PlantGroupForm} />
-                {/* <PlantGroupForm /><br/> */}
                 <Route path='/plant_groups/:id' render={(routerProps) => <PlantGroupShow {...routerProps} plantGroups={this.props.plantGroups}/>} />
                 <Route exact path='/plant_groups' render={(routerProps) => <PlantGroupList {...routerProps} plantGroups={this.props.plantGroups} />} />
-                {/* <PlantGroupList plantGroups={this.props.plantGroups} /> */}
             </div>
         );
     }
