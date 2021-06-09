@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { addPlantGroup } from '../actions/addPlantGroup'
 
 class PlantGroupForm extends Component {
 
@@ -13,8 +14,9 @@ class PlantGroupForm extends Component {
         })
     }
 
-    handleSubmit = () => {
-
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addPlantGroup(this.state)
     }
 
     render() {
