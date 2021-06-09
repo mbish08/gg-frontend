@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux' 
 import plantGroupReducer from './reducers/plantGroupReducer'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -13,7 +14,9 @@ let store = createStore(plantGroupReducer, composeEnhancers(applyMiddleware(thun
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
