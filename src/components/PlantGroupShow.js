@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom'
+import PlantTypeContainer from '../containers/PlantTypeContainer';
 
 const PlantGroupShow = (props) => {
 
@@ -7,8 +8,11 @@ const PlantGroupShow = (props) => {
 
     return (
         <div>
-            {group ? null : <Redirect to='/plant_groups'/>}
-            {group ? group.name : null}
+            <h2>
+                {group ? null : <Redirect to='/plant_groups'/>}
+                {group ? group.name : null}
+            </h2>
+            <PlantTypeContainer />
         </div>
     );
 }
