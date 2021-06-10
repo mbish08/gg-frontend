@@ -3,7 +3,8 @@ import React from 'react';
 const PlantTypeList = (props) => {
     return (
         <div>
-            {props.plantGroups}
+            {props.plantTypes && props.plantTypes.map(plantType => 
+            <li key={plantType.id}>{plantType.name}</li>)}
         </div>
     );
 }
