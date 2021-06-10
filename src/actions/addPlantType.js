@@ -1,4 +1,5 @@
-export const addPlantGroup = (plantType, groupId) => {
+
+const addPlantGroup = (plantType, groupId) => {
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/plant_groups/${groupId}/plant_types`, {
             headers: {

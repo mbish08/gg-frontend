@@ -22,7 +22,7 @@ class PlantTypeForm extends Component {
 
     handleSumit = (event) => {
         event.preventDefault()
-        this.props.addPlantType(this.state, this.props.id)
+        this.props.addPlantType(this.state, this.props.group.id)
         this.setState({
             name: '',
             fert_type: '',

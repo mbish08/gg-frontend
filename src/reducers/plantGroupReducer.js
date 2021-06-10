@@ -6,7 +6,14 @@ export default function plantGroupReducer(state = {plantGroups: []}, action) {
         case 'ADD_GROUP':
             return {...state, plantGroups: [...state.plantGroups, action.payload]}
         case 'ADD_TYPE':
-            return {}
+            let plantGroups = state.plantGroups.map(plantGroup => {
+                if (plantGroup.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return plantGroup
+                }
+            })
+            return {...state, plantGroups: plantGroups}
         default:
             return state
     }
