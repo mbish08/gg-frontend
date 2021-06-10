@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { addPlantType } from '../actions/addPlantType'
 
 class PlantTypeForm extends Component {
 
@@ -13,8 +14,6 @@ class PlantTypeForm extends Component {
         misc_info: ''
     }
 
-// t.integer "plant_group_id", null: false
-
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
@@ -23,7 +22,16 @@ class PlantTypeForm extends Component {
 
     handleSumit = (event) => {
         event.preventDefault()
-        // addPlantType(this.state, this.props.id)
+        this.props.addPlantType(this.state, this.props.id)
+        this.setState({
+            name: '',
+            fert_type: '',
+            fert_sched: '',
+            water: '',
+            soil_ph: '',
+            soil_type: '',
+            misc_info: ''
+        })
     }
 
     render() {
@@ -52,4 +60,4 @@ class PlantTypeForm extends Component {
     }
 }
 
-export default connect()(PlantTypeForm);
+export default connect(null, {addPlantType})(PlantTypeForm);

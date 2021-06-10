@@ -9,9 +9,9 @@ export const addPlantGroup = (plantType, groupId) => {
             body: JSON.stringify(plantType)
         })
         .then(res => res.json())
-        .then(pType => dispatch({
+        .then(plant_group => dispatch({
             type: 'ADD_TYPE',
-            payload: pType
+            payload: plant_group
         }))
         
     }
