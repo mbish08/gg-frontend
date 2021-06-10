@@ -3,7 +3,7 @@ import PlantGroupForm from '../components/PlantGroupForm'
 import PlantGroupList from '../components/PlantGroupList'
 import { fetchPlantGroups } from '../actions/fetchPlantGroups'
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import PlantGroupShow from '../components/PlantGroupShow';
 
 class PlantGroupContainer extends Component {
@@ -15,9 +15,11 @@ class PlantGroupContainer extends Component {
     render() {
         return (
             <div>
-                <Route path='/plant_groups/new' component={PlantGroupForm} />
-                <Route path='/plant_groups/:id' render={(routerProps) => <PlantGroupShow {...routerProps} plantGroups={this.props.plantGroups}/>} />
-                <Route exact path='/plant_groups' render={(routerProps) => <PlantGroupList {...routerProps} plantGroups={this.props.plantGroups} />} />
+                <Switch>
+                    <Route path='/plant_groups/new' component={PlantGroupForm} />
+                    <Route path='/plant_groups/:id' render={(routerProps) => <PlantGroupShow {...routerProps} plantGroups={this.props.plantGroups}/>} />
+                    <Route exact path='/plant_groups' render={(routerProps) => <PlantGroupList {...routerProps} plantGroups={this.props.plantGroups} />} />
+                </Switch>
             </div>
         );
     }

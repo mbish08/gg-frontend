@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom'
 
 const PlantGroupShow = (props) => {
 
@@ -6,6 +7,7 @@ const PlantGroupShow = (props) => {
 
     return (
         <div>
+            {group ? null : <Redirect to='/plant_groups'/>}
             {group ? group.name : null}
         </div>
     );
