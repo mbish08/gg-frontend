@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PlantTypeForm from '../components/PlantTypeForm';
 
 class PlantTypeContainer extends Component {
     render() {
         return (
             <div>
-                PlantTypeContainer test
+                <PlantTypeForm />
             </div>
         );
     }
