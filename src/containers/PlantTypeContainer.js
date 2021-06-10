@@ -7,7 +7,7 @@ class PlantTypeContainer extends Component {
         return (
             <div>
                 <PlantTypeForm />
-                <PlantTypeList plantTypes={this.props.account && this.props.group.plant_types} />
+                <PlantTypeList plantTypes={this.props.group && this.props.group.plant_types} />
             </div>
         );
     }
