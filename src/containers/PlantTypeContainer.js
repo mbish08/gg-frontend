@@ -6,7 +6,7 @@ class PlantTypeContainer extends Component {
     render() {
         return (
             <div>
-                <PlantTypeForm />
+                <PlantTypeForm plantGroup={this.props.group} />
                 <PlantTypeList plantTypes={this.props.group && this.props.group.plant_types} />
             </div>
         );
