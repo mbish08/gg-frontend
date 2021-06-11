@@ -6,7 +6,7 @@ export const deletePlantType = (plantTypeId, groupId) => {
                 'Accept': 'application/json'
             },
             method: 'DELETE',
-            body: JSON.stringify(plantType)
+        
         })
         .then(res => res.json())
         .then(plant_group => dispatch({
