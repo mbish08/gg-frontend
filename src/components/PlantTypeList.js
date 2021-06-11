@@ -1,10 +1,17 @@
 import React from 'react';
 
 const PlantTypeList = (props) => {
+
+    const handleDelete = () => {
+        
+    }
+
     return (
         <div>
             {props.plantTypes && props.plantTypes.map(plantType => 
-            <li key={plantType.id}>{plantType.name}</li>)}
+            <li key={plantType.id}>{plantType.name} 
+                <button onClick={this.handleDelete}>Delete</button></li>
+            )}
         </div>
     );
 }
