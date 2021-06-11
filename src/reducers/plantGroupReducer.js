@@ -15,14 +15,14 @@ export default function plantGroupReducer(state = {plantGroups: []}, action) {
             })
             return {...state, plantGroups: plantGroups}
         case 'DELETE_TYPE':
-            let plantGroups = state.plantGroups.map(plantGroup => {
+            let plantGroupsTypeDelete = state.plantGroups.map(plantGroup => {
                 if (plantGroup.id === action.payload.id) {
                     return action.payload
                 } else {
                     return plantGroup
                 }
             })
-            return {...state, plantGroups: plantGroups}
+            return {...state, plantGroups: plantGroupsTypeDelete}
         default:
             return state
     }
