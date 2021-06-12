@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 
 
 const PlantGroupList = (props) => {
-
+console.log(props)
     return (
-        <span>
+        <div>
             {props.plantGroups.map(plantGroup => 
                 <div key={plantGroup.id}>
-                    <Link to={`/plant_groups/${plantGroup.id}`}>{plantGroup.name}</Link>
+                    <Link to={`/plant_groups/${plantGroup.id}`}>{plantGroup.name}: {plantGroup.plant_types.length} types</Link>
                 </div> )}
-        </span>
+        </div>
     );
 }
 
