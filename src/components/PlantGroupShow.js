@@ -5,9 +5,6 @@ import PlantTypeContainer from '../containers/PlantTypeContainer';
 const PlantGroupShow = (props) => {
 
     let group = props.plantGroups.filter(plantGroup => plantGroup.id == props.match.params.id)[0]
-    // debugger
-    // props.plantGroups[props.match.params.id - 1]
-    // console.log(props)
 
     return (
         <div>
