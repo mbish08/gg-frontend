@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PlantGroupContainer from './containers/PlantGroupContainer'
 import { Route, Switch } from 'react-router-dom'
-import Home from './Home';
+import Home from './components/Home';
 
 class App extends Component {
 
