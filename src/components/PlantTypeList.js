@@ -4,9 +4,7 @@ import { deletePlantType } from '../actions/deletePlantType'
 
 const PlantTypeList = (props) => {
 
-// debugger;
     const handleDelete = (plantType) => {
-        // debugger;
         props.deletePlantType(plantType.id, plantType.plant_group_id)
     }
 
@@ -21,12 +19,3 @@ const PlantTypeList = (props) => {
 }
 
 export default connect(null, {deletePlantType})(PlantTypeList)
-
-// t.string "name"
-// t.text "fert_type"
-// t.text "fert_sched"
-// t.text "water"
-// t.float "soil_ph"
-// t.text "soil_type"
-// t.text "misc_info"
-// t.integer "plant_group_id", null: false

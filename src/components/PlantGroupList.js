@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 const PlantGroupList = (props) => {
-console.log(props)
+    
     return (
         <div>
             {props.plantGroups.map(plantGroup => 
