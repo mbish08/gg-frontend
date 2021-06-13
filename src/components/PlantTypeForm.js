@@ -37,7 +37,6 @@ class PlantTypeForm extends Component {
     render() {
         return (
             <div>
-                <h3>Add a new Type of Plant Type</h3>
                 <form onSubmit={this.handleSumit}>
                     <label>Name: </label>
                     <input type="text" value={this.state.name} name="name" onChange={this.handleChange} /><br/><br/>
