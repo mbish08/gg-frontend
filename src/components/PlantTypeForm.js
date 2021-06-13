@@ -55,6 +55,7 @@ class PlantTypeForm extends Component {
                     <input type="text" value={this.state.misc_info} name="misc_info" onChange={this.handleChange} /><br/><br/>
                     <input type="submit" />
                 </form>
+                <br/><hr/><br/>
             </div>
         );
     }
