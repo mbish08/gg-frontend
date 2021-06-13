@@ -23,6 +23,7 @@ const PlantTypeList = (props) => {
                 <br/><br/>
             </span>
             )}
+            <br/><hr/><br/>
         </div>
     );
 }
