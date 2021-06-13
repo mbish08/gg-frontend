@@ -10,7 +10,7 @@ const PlantGroupShow = (props) => {
         <div>
             <h2>
                 {group && group.name}
-                {group ? null : <Redirect to='/plant_groups'/>}
+                {/* {group ? null : <Redirect to='/plant_groups'/>} */}
             </h2>
             <PlantTypeContainer group={group}/>
         </div>

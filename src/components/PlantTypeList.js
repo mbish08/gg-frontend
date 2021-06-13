@@ -11,7 +11,7 @@ const PlantTypeList = (props) => {
     return (
         <div>
             {props.plantTypes && props.plantTypes.map(plantType => 
-            <span key={plantType.id}>{plantType.name} 
+            <div key={plantType.id}>{plantType.name} 
                 
                 <li>Fertilizer Type:  {plantType.fert_type}</li>
                 <li>Fertilizer Schedule:  {plantType.fert_sched}</li>
@@ -21,7 +21,7 @@ const PlantTypeList = (props) => {
                 <li>Misc Info:  {plantType.misc_info}</li>
                 <button onClick={() => handleDelete(plantType)}>Delete {plantType.name}</button>
                 <br/><br/>
-            </span>
+            </div>
             )}
             <br/><hr/><br/>
         </div>
