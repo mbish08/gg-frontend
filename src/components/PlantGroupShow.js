@@ -8,7 +8,7 @@ const PlantGroupShow = (props) => {
 
     return (
         <div>
-            <h2>
+            <h2 id="pgtitle">
                 {group && group.name}
                 {/* {group ? null : <Redirect to='/plant_groups'/>} */}
             </h2>
