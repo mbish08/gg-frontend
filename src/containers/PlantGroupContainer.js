@@ -18,7 +18,7 @@ class PlantGroupContainer extends Component {
                 <Switch>
                     <Route path='/plant_groups/new' component={PlantGroupForm} />
                     <Route path='/plant_groups/:id' render={(routerProps) => <PlantGroupShow {...routerProps} plantGroups={this.props.plantGroups}/>} />
-                    <Route exact path='/plant_groups' render={(routerProps) => <PlantGroupList {...routerProps} plantGroups={this.props.plantGroups} />} />
+                    <Route exact path='/plant_groups' render={(routerProps) => <PlantGroupList {...routerProps} plantGroups={this.props.plantGroups} plantGroupsAlpha={this.props.plantGroupsAlpha} count={this.props.count} />} />
                 </Switch>
             </div>
         );
@@ -26,8 +26,11 @@ class PlantGroupContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+    let alpha = [...state.plantGroups]
     return {
-        plantGroups: state.plantGroups
+        plantGroups: state.plantGroups,
+        plantGroupsAlpha: alpha.sort((type1, type2) => (type1.name > type2.name) ? 1 : -1),
+        count: 0 
     }
 }
 
