@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 class PlantGroupList extends Component {
     
-
     state = {
         count: this.props.count
     }
@@ -27,10 +26,18 @@ class PlantGroupList extends Component {
                     <Link to={`/plant_groups/${plantGroup.id}`}>{plantGroup.name}: {plantGroup.plant_types.length} types</Link>
                 </div> 
             )
+
+        const link = {
+            width: '100px',
+            padding: '10px',
+            background: 'green',
+            textDecoration: 'none',
+            color: 'white'
+        }
         
         return (
             <div>
-                <button onClick={this.handleClick} >Sort</button>
+                <button style={link} onClick={this.handleClick} >{this.state.count === 0 ? "Alphabetize" : "Original List"}</button>
                 {this.state.count === 0 ? unsorted : sorted} 
             </div>
         );
